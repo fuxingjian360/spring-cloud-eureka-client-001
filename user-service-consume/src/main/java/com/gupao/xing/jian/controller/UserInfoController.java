@@ -19,7 +19,7 @@ public class UserInfoController {
     public String addUserInfo() throws Exception{
         String result = "F";
         UserInfo userInfo = new UserInfo();
-        userInfo.setName("张三");
+        userInfo.setName("张三2");
         userInfo.setAge(new Short("18"));
         userInfo.setSex("女");
         int i = userInfoService.addUserInfo(userInfo);
