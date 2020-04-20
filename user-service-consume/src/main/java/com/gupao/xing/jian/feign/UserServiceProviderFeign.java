@@ -1,6 +1,6 @@
 package com.gupao.xing.jian.feign;
 
-import com.gupao.xing.jian.domain.User;
+import com.gupao.xing.jian.app1.userinfo.domain.User;
 import com.gupao.xing.jian.feign.callback.UserServiceProviderFeignCallBack;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestBody;

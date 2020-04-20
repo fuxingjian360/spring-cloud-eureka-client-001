@@ -1,7 +1,7 @@
 package com.gupao.xing.jian.proxy;
 
 import com.gupao.xing.jian.api.IUserApi;
-import com.gupao.xing.jian.domain.User;
+import com.gupao.xing.jian.app1.userinfo.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;

@@ -12,7 +12,7 @@ spring:
     #    mapper-locations: classpath*:/com/gupao/xing/jian/mapper/*Mapper.xml  #注意：一定要对应mapper映射xml文件的所在路径
     #type-aliases-package: com.gupao.xing.jian  # 注意：对应实体类的路径
 
-  redis:
-    host: 114.67.178.177
-    port: 6379
-    password: 123456
+redis:
+  host: 114.67.178.177
+  port: 6379
+  password: 123456

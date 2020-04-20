@@ -13,8 +13,9 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@MapperScan("com.gupao.xing.jian.**.mapper")
-//@EnableTransactionManagement
+@MapperScan(basePackages = "com.gupao.xing.jian.app1.**.mapper", sqlSessionTemplateRef = "db1SqlSessionTemplate")
+@MapperScan(basePackages = "com.gupao.xing.jian.app2.**.mapper", sqlSessionTemplateRef = "db2SqlSessionTemplate")
+@EnableTransactionManagement
 @EnableFeignClients
 @EnableHystrix
 public class UserServiceConsumeBootstrap {
