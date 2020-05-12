@@ -1,15 +1,16 @@
 package com.gupao.xing.jian.app1.student.controller;
 
 import com.github.pagehelper.PageInfo;
+import com.gupao.xing.jian.app1.student.domain.Student;
+import com.gupao.xing.jian.app1.student.domain.StudentAndUserinfo;
+import com.gupao.xing.jian.app1.student.service.IStudentService;
 import com.gupao.xing.jian.app1.userinfo.domain.UserInfo;
 import com.gupao.xing.jian.app1.userinfo.service.IUserInfoService;
-import com.gupao.xing.jian.app1.student.domain.Student;
-import com.gupao.xing.jian.app1.student.service.IStudentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -34,6 +35,23 @@ public class StudentController {
     @PostMapping("/getStudents")
     public List<Student> getStudents(){
         return studentService.getStudents();
+    }
+
+    @GetMapping("/getStudentsAndUserInfo")
+    public StudentAndUserinfo getStudentsAndUserInfo(HttpServletRequest request, HttpServletResponse response,Long id) {
+        Object name1 = request.getAttribute("name001");
+        Object name2 = request.getAttribute("name002");
+        System.err.println("name1:"+name1);
+        System.err.println("name2:"+name1);
+        System.err.println("id:"+id);
+        //System.err.println("StudentController.getStudentsAndUserInfo()");
+        StudentAndUserinfo studentAndUserinfo = new StudentAndUserinfo();
+        List<Student> students = studentService.getStudents();
+        List<UserInfo> userInfos = userInfoService.getUserInfos();
+        studentAndUserinfo.setStudents(students);
+        studentAndUserinfo.setUserInfos(userInfos);
+
+        return studentAndUserinfo;
     }
 
     @PostMapping("/addStudent")

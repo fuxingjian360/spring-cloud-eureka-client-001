@@ -1,18 +1,10 @@
 spring:
-  #请求参数日期处理
-  #jackson:
-  #  date-format: yyyy-MM-dd HH:mm:ss
-  #  time-zone: GMT-5
-
   datasource:
      #url: jdbc:mysql://114.67.178.177:3306/TestDB?useUnicode=true&characterEncoding=UTF-8
      #username: root
      #password: fxj123456
      #driver-class-name: com.mysql.jdbc.Driver
-      # 使用druid数据源
-      # type: com.alibaba.druid.pool.DruidDataSource
-
-      #数据库TestDB
+     #数据库TestDB
      db1:
        url: jdbc:mysql://114.67.178.177:3306/TestDB?useUnicode=true&characterEncoding=UTF-8
        driver-class-name: com.mysql.jdbc.Driver
@@ -25,8 +17,8 @@ spring:
        username: root
        password: fxj123456
     ## 该配置节点为独立的节点，有很多同学容易将这个配置放在spring的节点下，导致配置无法被识别
-redis:
-  host: 114.67.178.177
-  port: 6379
-  password: 123456
+#redis:
+#  host: 114.67.178.177
+#  port: 6379
+#  password: 123456
 

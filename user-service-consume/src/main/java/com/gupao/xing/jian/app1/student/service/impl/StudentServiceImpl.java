@@ -38,7 +38,7 @@ public class StudentServiceImpl implements IStudentService {
     }
 
     @Override
-    @Transactional
+    @Transactional(transactionManager = "db1DataSourceTransactionManager")
     public int addStudentAndUser(Student student, UserInfo userInfo) throws Exception {
         int i= this.addStudent(student);
         int j = userInfoService.addUserInfo(userInfo);
@@ -46,7 +46,7 @@ public class StudentServiceImpl implements IStudentService {
     }
 
     @Override
-    @Transactional
+    @Transactional(transactionManager = "db1DataSourceTransactionManager")
     public int addStudent(Student student) throws MyRuntimeException{
         int i = studentMapper.insert(student);
         if(student.getName().equals("张三")){

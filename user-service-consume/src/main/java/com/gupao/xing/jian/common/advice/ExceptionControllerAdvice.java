@@ -1,6 +1,6 @@
 package com.gupao.xing.jian.common.advice;
 
-import com.gupao.xing.jian.common.vo.ResultVO;
+import com.gupao.xing.jian.common.util.ResultVO;
 import com.gupao.xing.jian.common.exception.MyRuntimeException;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;

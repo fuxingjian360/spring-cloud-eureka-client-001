@@ -1,4 +1,4 @@
-package com.gupao.xing.jian.common.vo;
+package com.gupao.xing.jian.common.util;
 
 import java.io.Serializable;
 

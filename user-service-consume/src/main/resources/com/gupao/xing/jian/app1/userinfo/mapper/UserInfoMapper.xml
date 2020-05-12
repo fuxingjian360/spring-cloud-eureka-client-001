@@ -20,6 +20,16 @@
     -->
     id, name, sex, age
   </sql>
+  <select id="getUserInfos" resultType="com.gupao.xing.jian.app1.userinfo.domain.UserInfo">
+    SELECT
+        t.id,
+        t.age,
+        t.`name`,
+        t.sex
+    FROM
+        user_info_t t
+  </select>
+
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     <!--
       WARNING - @mbg.generated

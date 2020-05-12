@@ -2,6 +2,8 @@ package com.gupao.xing.jian.app1.userinfo.mapper;
 
 import com.gupao.xing.jian.app1.userinfo.domain.UserInfo;
 
+import java.util.List;
+
 //@Mapper
 public interface UserInfoMapper {
     /**
@@ -52,4 +54,6 @@ public interface UserInfoMapper {
      * @mbg.generated Sun Mar 29 09:07:03 CST 2020
      */
     int updateByPrimaryKey(UserInfo record);
+
+    List<UserInfo> getUserInfos();
 }
